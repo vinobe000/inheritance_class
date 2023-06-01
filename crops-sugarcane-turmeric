@@ -1,0 +1,69 @@
+
+In [51]: class crops():
+    ...:     def __init__(self,types,acres):
+    ...:         self._types=types
+    ...:         self._acres=acres
+    ...:
+
+In [52]: class sugarcane(crops):
+    ...:     def displaysugarcane(self):
+    ...:         self._price=3000
+    ...:         if(self._types=="sugarcane" and self._acres>40000 and self._acres<50000):
+    ...:             self._price+=500
+    ...:             print(f"{self._price}")
+    ...:         if(self._types=="sugarcane" and self._acres>50000 and self._acres<60000):
+    ...:             self._price+=200
+    ...:             print(f"{self._price}")
+    ...:         elif(self._types=="sugercene" and self._acres>60000 and self._acres<70000):
+    ...:             print(f"{self._price}")
+    ...:         elif(self._types=="sugarcane" and self._acres>70000 and self._acres<80000):
+    ...:             self._price-=300
+    ...:             print(f"{self._price}")
+    ...:         elif(self._types=="sugarcane" and self._acres>80000 and self._acres<90000):
+    ...:             self._price-=500
+    ...:             print(f"{self._price}")
+    ...:         elif(self._types=="sugarcane" and self._acres>90000 and self._acres<10000):
+    ...:             self._price-=1000
+    ...:             print(f"{self._price}")
+    ...:         else:
+    ...:             self._price-=1500
+    ...:             print(f"{self._price}")
+    ...:
+
+In [53]: class turmeric(sugarcane):
+    ...:     def displayturmeric(self):
+    ...:         self._price=10000
+    ...:         if(self._types=="turmeric" and self._acres<=50000 and self._acres>=40000):
+    ...:             self._price+=2000
+    ...:             print(f"{self._price}")
+    ...:         elif(self._types=="turmeric" and self._acres<=60000 and self._acres>50000):
+    ...:             self._price+=1000
+    ...:             print(f"{self._price}")
+    ...:         elif(self._types=="turmeric" and self._acres<=70000 and self._acres>60000):
+    ...:             self._price+=500
+    ...:             print(f"{self._price}")
+    ...:         elif(self._types=="turmeric"and self._acres<=80000 and self._acres>70000):
+    ...:             print(f"{self._price}")
+    ...:         elif(self._types=="turmeric" and self._acres<=90000 and self._acres>80000):
+    ...:             self._price-=1000
+    ...:             print(f"{self._price}")
+    ...:         elif(self._types=="turmeric" and self._acres<=100000 and self._acres>90000):
+    ...:             self._price-=1500
+    ...:             print(f"{self._price}")
+    ...:         elif(self._types=="turmeric" and self._acres<=120000 and self._acres>100000):
+    ...:             self._price-=2000
+    ...:             print(f"{self._price}")
+    ...:         else:
+    ...:             self._price-=3000
+    ...:             print(f"{self._price}")
+    ...:
+
+In [54]: vinoth=turmeric("turmeric",55000)
+
+In [55]: vinoth.displayturmeric()
+11000
+
+In [56]: vinoth.displaysugarcane()
+1500
+
+In [57]:
