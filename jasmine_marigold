@@ -1,0 +1,46 @@
+
+In [53]: class flowers():
+    ...:     def __init__(self,varietes,quality,price,weight):
+    ...:         self._varietes=varietes
+    ...:         self._quality=quality
+    ...:         self._price=price
+    ...:         self._weight=weight
+    ...:
+
+In [54]: class marigold(flowers):
+    ...:     def displaymari(self):
+    ...:         if(self._varietes=="marigold" and self._quality==1 and self._weight>30):
+    ...:             self._price-=20
+    ...:             print(f"{self._price}")
+    ...:         elif(self._varietes=="marigold" and self._quality==1 and self._weight>20):
+    ...:             self._price-=15
+    ...:             print(f"{self._price}")
+    ...:         elif(self._varietes=="marigold" and self._quality==2 and self._weight>30):
+    ...:             self._price-=30
+    ...:             print(f"{self._price}")
+    ...:         elif(self._varietes=="marigold" and self._quality==2 and self._weight>20):
+    ...:             self._price-=20
+    ...:             print(f"{self._price}")
+    ...:         else:
+    ...:             print(f"{self._price}")
+    ...:
+
+In [55]: class jasmine(flowers):
+    ...:     def displayjasmine(self):
+    ...:         if(self._varietes=="jasmine" and self._quality==1 and self._weight>3):
+    ...:             self._price-=200
+    ...:             print(f"{self._price}")
+    ...:         elif(self._varietes=="jasmine" and self._quality==1 and self._weight>2):
+    ...:             self._price-=150
+    ...:             print(f"{self._price}")
+    ...:         elif(self._varietes=="jasmine" and self._quality==2 and self._weight>3):
+    ...:             self._price-=300
+    ...:             print(f"{self._price}")
+    ...:         elif(self._varietes=="jasmine" and self._quality==2 and self._weight>2):
+    ...:             self._price-=200
+    ...:             print(f"{self._price}")
+    ...:         else:
+    ...:             print(f"{self._price}")
+    ...:
+
+In [56]:
