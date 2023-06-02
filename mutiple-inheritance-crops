@@ -1,0 +1,42 @@
+
+In [51]: class turmeric():
+    ...:     def __init__(self,acres,price,varieties):
+    ...:         self._acres=acres
+    ...:         self._price=price
+    ...:         self._varieties=varieties
+    ...:
+
+In [52]: class sugarcane():
+    ...:     def __init__(self,acres,price,varieties):
+    ...:         self._acres=acres
+    ...:         self._price=price
+    ...:         self._varieties=varieties
+    ...:
+
+In [53]: class crops(sugarcane,turmeric):
+    ...:     def __init__(self,acres,price,varieties):
+    ...:         super().__init__(acres,price,varieties)
+    ...:     def displaycrops(self):
+    ...:         if(self._varieties=="sugarcane" and self._price==3000 and self._acres<100000 and self._
+    ...: acres>50000):
+    ...:             self._price+=200
+    ...:             print(f"{self._price}")
+    ...:         elif(self._varieties=="turmeric" and self._price==10000 and self._acres<100000 and self
+    ...: ._acres>50000):
+    ...:             self._price+=1000
+    ...:             print(f"{self._price}")
+    ...:         else:
+    ...:             print(f"{self._price}")
+    ...:
+
+In [54]: vinoth=crops(75000,10000,"turmeric")
+
+In [55]: vinoth.displaycrops()
+11000
+
+In [56]: vinoth=crops(75000,3000,"sugarcane")
+
+In [57]: vinoth.displaycrops()
+3200
+
+In [58]:
