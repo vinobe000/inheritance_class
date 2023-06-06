@@ -1,0 +1,33 @@
+
+In [37]: class a():
+    ...:     def __init__(self,a,b):
+    ...:         self.a=a
+    ...:         self.b=b
+    ...:     def displaya(self):
+    ...:         print(self.a)
+    ...:         print(self.b)
+    ...:         print(self.a+self.b)
+    ...:
+
+In [38]: class b(a):
+    ...:     def __init__(self,a,b,c):
+    ...:         self.a=a
+    ...:         self.b=b
+    ...:         self.c=c
+    ...:     def displayb(self):
+    ...:         print(self.a,self.b)
+    ...:         print(self.c)
+    ...:
+
+In [39]: obj1=b(12,12,12)
+
+In [40]: obj1.displayb()
+12 12
+12
+
+In [41]: obj1.displaya()
+12
+12
+24
+
+In [42]:
