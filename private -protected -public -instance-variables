@@ -1,0 +1,95 @@
+
+In [43]: class students():
+    ...:     def __init__(self,name,age,city):
+    ...:         self.name=name
+    ...:         self.age=age
+    ...:         self.__city=city
+    ...:         self.city=city
+    ...:         self._city=city
+    ...:     def displaystudents(self):
+    ...:         print(self.city,self._city)
+    ...:
+
+In [44]: class teacher(students):
+    ...:     def displayteacher(self):
+    ...:         print(self._city)
+    ...:         print(self.city)
+    ...:         print(students.displaystudents(self))
+    ...:
+
+In [45]: obj=teacher("vinoth",28,"salem")
+
+In [46]: obj.displaystudents()
+salem salem
+
+In [47]: obj.displayteacher()
+salem
+salem
+salem salem
+None
+
+In [48]: class students():
+    ...:     def __init__(self,name,age,city):
+    ...:         self.name=name
+    ...:         self.age=age
+    ...:         self.__city=city
+    ...:         self.city=city
+    ...:         self._city=city
+    ...:     def displaystudents(self):
+    ...:         print(self.city,self._city)
+    ...:         print(self.__city)
+    ...:
+
+In [49]: class teacher(students):
+    ...:     def displayteacher(self):
+    ...:         print(self._city)
+    ...:         print(self.city)
+    ...:         print(students.displaystudents(self))
+    ...:
+
+In [50]: obj=teacher("vinoth",28,"salem")
+
+In [51]: obj.displayteacher()
+salem
+salem
+salem salem
+salem
+None
+
+In [52]:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
