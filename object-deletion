@@ -1,0 +1,33 @@
+
+In [13]: class students():
+    ...:     def __init__(self,name,age,city):
+    ...:         self.name=name
+    ...:         self.age=age
+    ...:         self.city=city
+    ...:     def __del__(self):
+    ...:         print(self.name)
+    ...:
+
+In [14]: vinoth=students("vinoth","omalur","salem")
+
+In [15]: vinoth.age
+Out[15]: 'omalur'
+
+In [16]: del(vinoth)
+
+vinoth
+In [17]: class students():
+    ...:     def __init__(self,name,age,city):
+    ...:         self.name=name
+    ...:         self.age=age
+    ...:         self.city=city
+    ...:     def __del__(self):
+    ...:         print("vinoth has deleteed the object")
+    ...:
+
+In [18]: vinoth=students("vinoth","omalur","salem")
+
+In [19]: del(vinoth)
+vinoth has deleteed the object
+
+In [20]:
