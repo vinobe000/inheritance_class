@@ -1,0 +1,157 @@
+
+In [2]: class college():
+   ...:     def __init__(self,name,age,city):
+   ...:         self.name=name
+   ...:         self.age=age
+   ...:         self.city=city
+   ...:     def __displaycollege(self):
+   ...:         print(self.name,self.age,self.city)
+   ...:
+
+In [3]: class teacher(college):
+   ...:     def displaycollege(self):
+   ...:         print(self.name)
+   ...:
+
+In [4]: vinoth=teacher("kumar",28,"omalur")
+
+In [5]: vinoth.displaycollege()
+kumar
+
+In [6]: vinoth.displaycollege()
+kumar
+
+In [7]: class college():
+   ...:     def __init__(self,name,age,city):
+   ...:         self.name=name
+   ...:         self.age=age
+   ...:         self.city=city
+   ...:     def __displaycollege(self):
+   ...:         print("vinoth")
+   ...:     def display(self):
+   ...:         print(college.__displaycollege(self))
+   ...:
+
+In [8]: class teacher(college):
+   ...:     def displaycollege(self):
+   ...:         print(self.name)
+   ...:
+
+In [9]: vinoth=teacher("kumar",28,"omalur")
+
+In [10]: vinoth.display()
+vinoth
+None
+
+In [11]: vinoth.displaycollege()
+kumar
+
+In [12]: class college():
+    ...:     def __init__(self,name,age,city):
+    ...:         self.name=name
+    ...:         self.age=age
+    ...:         self.city=city
+    ...:     def __displaycollege(self):
+    ...:         print(self.name)
+    ...:     def display(self):
+    ...:         print(college.__displaycollege(self))
+    ...:
+
+In [13]: class teacher(college):
+    ...:     def displaycollege(self):
+    ...:         print(self.name)
+    ...:
+
+In [14]: vinoth=teacher("kumar",28,"omalur")
+
+In [15]: vinoth.displaycollege()
+kumar
+
+In [16]: vinoth.display()
+kumar
+None
+
+In [17]: class college():
+    ...:     def __init__(self,name,age,city):
+    ...:         self.name=name
+    ...:         self.age=age
+    ...:         self.city=city
+    ...:     def _displaycollege(self):
+    ...:         print(self.name)
+    ...:     def display(self):
+    ...:         print(college._displaycollege(self))
+    ...:
+
+In [18]: class teacher(college):
+    ...:     def displaycollege(self):
+    ...:         print(self.name)
+    ...:
+
+In [19]: vinoth=teacher("kumar",28,"omalur")
+
+In [20]: vinoth.display()
+kumar
+None
+
+In [21]: vinoth.displaycollege()
+kumar
+
+In [22]: class teacher(college):
+    ...:     def displaycollege(self):
+    ...:         print(self.name)
+    ...:         print(college._displaycollege(self))
+    ...:
+
+In [23]: vinoth=teacher("kumar",28,"omalur")
+
+In [24]: vinoth.displaycollege()
+kumar
+kumar
+None
+
+In [25]: from abc import ABC
+
+In [26]: from abc import abstractmethod
+
+In [27]: class college(ABC):
+    ...:     @abstractmethod
+    ...:     def displaycollege(self):
+    ...:         pass
+    ...:
+
+In [28]: class teacher(college):
+    ...:     def __init__(self,name,age,city):
+    ...:         self.name=name
+    ...:         self.age=age
+    ...:         self.city=city
+    ...:     def displaycollege(self):
+    ...:         print(self.name)
+    ...:         print(self.age)
+    ...:
+
+In [29]: college.__dict__
+Out[29]:
+mappingproxy({'__module__': '__main__',
+              'displaycollege': <function __main__.college.displaycollege(self)>,
+              '__dict__': <attribute '__dict__' of 'college' objects>,
+              '__weakref__': <attribute '__weakref__' of 'college' objects>,
+              '__doc__': None,
+              '__abstractmethods__': frozenset({'displaycollege'}),
+              '_abc_impl': <_abc_data at 0xe5599b8690>})
+
+In [30]: teacher.__dict__
+Out[30]:
+mappingproxy({'__module__': '__main__',
+              '__init__': <function __main__.teacher.__init__(self, name, age, city)>,
+              'displaycollege': <function __main__.teacher.displaycollege(self)>,
+              '__doc__': None,
+              '__abstractmethods__': frozenset(),
+              '_abc_impl': <_abc_data at 0xe55995d900>})
+
+In [31]: vinoth=teacher("kumar",28,"omalur")
+
+In [32]: vinoth.displaycollege()
+kumar
+28
+
+In [33]:
